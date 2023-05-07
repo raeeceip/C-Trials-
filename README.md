@@ -69,7 +69,6 @@ print("Player strength after boost: ", player.strength)
 
 ```
 
-<span style="color:red">some **NOTE: This is not an exact implementation of the syntax, it is merely for demonstration porposes** text</span>
+**NOTE: This is not an exact implementation of the syntax, it is merely for demonstration porposes** 
 
-<p>Some Markdown text with <span style="color:blue">some <em>blue</em> text</span>.</p>
 2. It could be one property, or a combination of properties that could be changed when activated
