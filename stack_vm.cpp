@@ -83,4 +83,19 @@ void StackVM::doPrimitive()
     }
 }
 
-void StackVm::run()
+void StackVM::run(){
+    pc -=1
+    while(running ==1){
+        fetch();
+        decode();
+        execute();
+        std::cout << "top of stack" << memory[sp] << std::endl
+
+    }
+
+}
+voud StackVm::loadProgram(std::vector<i32> prog){
+    for (i32 i = 0; i < prog.size(); i++){
+        memory[pc + i] = prog[i];
+    }   
+}
