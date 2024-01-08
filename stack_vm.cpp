@@ -1,4 +1,4 @@
-#include 'vm.h'
+#include 'stack-vm.h'
 
 /*
 
