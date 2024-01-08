@@ -74,8 +74,9 @@ void StackVM::doPrimitive()
         running = 0;
         break;
     case 1: // add
-        std::cout << "add" << memory[sp - 1] << "" << memory[sp] << std::endl;
+        std::cout << "add " << memory[sp - 1] << " " << memory[sp] << std::endl;
         memory[sp - 1] = memory[sp - 1] + memory[sp];
+        sp--;
         /*
         we essentially add two things from the stack together, and since when we add them we have to remove them from the stack and place the result back into it, we have to remove one from he current stack space, Does that make sense Chiso?
         */
