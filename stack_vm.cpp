@@ -51,3 +51,36 @@ void StackVM::decode()
     typ = getType(memory[pc]);
     dat = getData(memory[pc]);
 }
+
+void StackVM::execute()
+{
+    if (typ == 0 || typ == 2)
+    {
+        sp++;
+        memory[sp] = dat;
+    }
+    else
+    {
+        doPrimitive();
+    }
+}
+void StackVM::doPrimitive()
+{
+    // designing instructions for primitive functions
+    switch (dat)
+    {
+        case 0; //  halt
+            std::cout << "halt" << std::endl;
+            running = 0
+            break;
+            case 1; // add
+        stdcout:: << "add" << memory[sp -1 ] << "" << memory[sp] << std::endl;
+        memory[sp - 1] = memory[sp - 1] + memory[sp]; 
+        /*
+        we essentially add two things from the stack together, and since when we add them we have to remove them from the stack and place the result back into it, we have to remove one from he current stack space, Does that make sense Chiso?
+        */
+       break; 
+    }
+}
+
+void StackVm::run()
