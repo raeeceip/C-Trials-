@@ -72,3 +72,12 @@ print("Player strength after boost: ", player.strength)
 **NOTE: This is not an exact implementation of the syntax, it is merely for demonstration porposes** 
 
 2. It could be one property, or a combination of properties that could be changed when activated
+
+
+# Idea 2 ; a simple virtual machine
+- This is a simple virtual machine that will be implemented in C++ and will be able to run a simple assembly language program.
+
+## Goals:
+1. The virtual machine should be able to run a simple assembly language program.
+2. The virtual machine should be able to run a simple assembly language program that can perform basic arithmetic operations.
+   
