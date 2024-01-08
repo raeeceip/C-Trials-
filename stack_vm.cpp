@@ -1,4 +1,4 @@
-#include 'stack-vm.h'
+#include "stack-vm.h"
 
 /*
 
@@ -69,33 +69,35 @@ void StackVM::doPrimitive()
     // designing instructions for primitive functions
     switch (dat)
     {
-        case 0; //  halt
-            std::cout << "halt" << std::endl;
-            running = 0
-            break;
-            case 1; // add
-        stdcout:: << "add" << memory[sp -1 ] << "" << memory[sp] << std::endl;
-        memory[sp - 1] = memory[sp - 1] + memory[sp]; 
+    case 0: //  halt
+        std::cout << "halt" << std::endl;
+        running = 0;
+        break;
+    case 1: // add
+        std::cout << "add" << memory[sp - 1] << "" << memory[sp] << std::endl;
+        memory[sp - 1] = memory[sp - 1] + memory[sp];
         /*
         we essentially add two things from the stack together, and since when we add them we have to remove them from the stack and place the result back into it, we have to remove one from he current stack space, Does that make sense Chiso?
         */
-       break; 
+        break;
     }
 }
 
-void StackVM::run(){
-    pc -=1
-    while(running ==1){
+void StackVM::run()
+{
+    pc -= 1;
+    while (running == 1)
+    {
         fetch();
         decode();
         execute();
-        std::cout << "top of stack" << memory[sp] << std::endl
-
+        std::cout << "top of stack" << memory[sp] << std::endl;
     }
-
 }
-voud StackVm::loadProgram(std::vector<i32> prog){
-    for (i32 i = 0; i < prog.size(); i++){
+void StackVM::loadProgram(std::vector<i32> prog)
+{
+    for (i32 i = 0; i < prog.size(); i++)
+    {
         memory[pc + i] = prog[i];
-    }   
+    }
 }

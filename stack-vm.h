@@ -29,5 +29,10 @@ class StackVM
     void doPrimitive(); // helper function for the vm
 
     // public functions
-    StackVM() void run() void loadProgram(std::vector<i32> prog);
+public:
+    StackVM();
+    void run();
+    void loadProgram(std::vector<i32> prog);
 };
+
+#endif

@@ -1,9 +1,9 @@
-CFLAGS=-std=c+11
+CFLAGS=-std=c++11
 
 all:stack-vm
 
-stack-vm: stack_vm.o main.o
-	$(CXX) $(CFLAGS) -o vm stack-vm.o main.o
+stack-vm: stack-vm.o main.o
+	$(CXX) $(CFLAGS) -o stack-vm stack-vm.o main.o
 	
 main.o:main.cpp
 	$(CXX) $(CFLAGS) -c main.cpp
@@ -13,5 +13,4 @@ stack-vm.o: stack-vm.h stack_vm.cpp
 
 clean:
 	rm -f *.o
-	rm -f stack-vm
 
